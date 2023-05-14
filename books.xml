@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="books.xsl" ?>
+
+<bookstore>
+
+    <book id="B001">
+        <category>cooking</category>
+        <title lang="en">Everyday Italian</title>
+        <author>Giada De Laurentiis</author>
+        <year>2005</year>
+        <price>30.00</price>
+    </book>
+
+    <book category="B002">
+        <category>children</category>
+        <title lang="en">Harry Potter</title>
+        <author>J K. Rowling</author>
+        <year>2005</year>
+        <price>29.99</price>
+    </book>
+
+    <book id="B003">
+        <category>web</category>
+        <title lang="en">XQuery Kick Start</title>
+        <author>James McGovern</author>
+        <author>Per Bothner</author>
+        <author>Kurt Cagle</author>
+        <author>James Linn</author>
+        <author>Vaidyanathan Nagarajan</author>
+        <year>2003</year>
+        <price>49.99</price>
+    </book>
+
+    <book category="B004">
+        <category>web</category>
+        <title lang="en">Learning XML</title>
+        <author>Erik T. Ray</author>
+        <year>2003</year>
+        <price>39.95</price>
+    </book>
+
+    <book id="B005">
+        <category>fiction</category>
+        <title>The Catcher in the Rye</title>
+        <author>J.D. Salinger</author>
+        <publisher>Little, Brown and Company</publisher>
+        <year>1951</year>
+        <price>10.99</price>
+    </book>
+    <book id="B006">
+        <category>fiction</category>
+        <title>To Kill a Mockingbird</title>
+        <author>Harper Lee</author>
+        <publisher>J. B. Lippincott &amp; Co.</publisher>
+        <year>1960</year>
+        <price>12.95</price>
+    </book>
+    <book id="B007">
+        <category>fiction</category>
+        <title>1984</title>
+        <author>George Orwell</author>
+        <publisher>Secker &amp; Warburg</publisher>
+        <year>1949</year>
+        <price>9.99</price>
+    </book>
+    <book id="B008">
+        <category>web</category>
+        <title>Learning Web Design</title>
+        <author>Jennifer Niederst Robbins</author>
+        <publisher>O'Reilly Media</publisher>
+        <year>2012</year>
+        <price>39.99</price>
+    </book>
+    <book id="B009" >
+        <category>web</category>
+        <title>HTML and CSS: Design and Build Websites</title>
+        <author>Jon Duckett</author>
+        <publisher>John Wiley &amp; Sons</publisher>
+        <year>2011</year>
+        <price>29.99</price>
+    </book>
+    <book id="B010">
+        <category>web</category>
+        <title>JavaScript and jQuery: Interactive Front-End Web Development</title>
+        <author>Jon Duckett</author>
+        <publisher>John Wiley &amp; Sons</publisher>
+        <year>2014</year>
+        <price>39.99</price>
+    </book>
+
+    <book id="B011">
+        <category>children</category>
+        <title>Where the Wild Things Are</title>
+        <author>Maurice Sendak</author>
+        <publisher>Harper &amp; Row</publisher>
+        <year>1963</year>
+        <price>12.99</price>
+    </book>
+    <book id="B012">
+        <category>children</category>
+        <title>The Giving Tree</title>
+        <author>Shel Silverstein</author>
+        <publisher>Harper &amp; Row</publisher>
+        <year>1964</year>
+        <price>10.99</price>
+    </book>
+    <book id="B013">
+        <category>children</category>
+        <title>Green Eggs and Ham</title>
+        <author>Dr. Seuss</author>
+        <publisher>Random House</publisher>
+        <year>1960</year>
+        <price>8.99</price>
+    </book>
+
+</bookstore>
+
+
