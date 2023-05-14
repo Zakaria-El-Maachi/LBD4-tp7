@@ -37,8 +37,6 @@
     <input type="text" id="volcity2">
     <label for="date">Date : </label>
     <input type="date" id="date">
-    <label for="price">Price : </label>
-    <input type="text" id="price">
     <button onclick="vol()">Search</button>
     <div id="vols" style="margin-top:20px; width:fit-content; border-radius:10px; border:1px solid black;"></div>
 
@@ -132,13 +130,39 @@
         });
 
         function vol() {
-            let city1 = document.getElementById("volcity").value;
-            let city2 = document.getElementById("volcity2").value;
-            let date = document.getElementById("date").value;
-            let price = document.getElementById("price").value;
-            fetch(`https://api.skypicker.com/flights?fly_from=${city1}&fly_to=${city2}&date_from=Y&date_to=${date}&max_price=${price}&partner=picky`)
-                .then(response => response.json()).then(data => document.getElementById("vols").innerHTML = parsedvols(data))
-                .catch(error => document.getElementById("vols").innerHTML = parsedvols(error));
+            const api_key = 'your_api_key';
+            const departure_city = document.getElementById("volcity");
+            const arrival_city = document.getElementById("volcity2");
+            const departure_date = document.getElementById("date");
+
+            fetch(`http://api.aviationstack.com/v1/cities?access_key=49838cdcc1d6a6936c966532c162f035&search=${departure_city}`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    const departure_iata = data.data[0].iata_code;
+
+                    fetch(`http://api.aviationstack.com/v1/cities?access_key=49838cdcc1d6a6936c966532c162f035&search=${arrival_city}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            const arrival_iata = data.data[0].iata_code;
+
+                            fetch(`http://api.aviationstack.com/v1/flights?access_key=49838cdcc1d6a6936c966532c162f035&dep_iata=${departure_iata}&arr_iata=${arrival_iata}&flight_date=${departure_date}`)
+                                .then(response => response.json())
+                                .then(data => {
+                                    console.log(data);
+                                })
+                                .catch(error => {
+                                    console.error('Error fetching flight schedules:', error);
+                                });
+                        })
+                        .catch(error => {
+                            console.error('Error fetching arrival city:', error);
+                        });
+                })
+                .catch(error => {
+                    console.error('Error fetching departure city:', error);
+                });
+
         }
 
         function image() {
